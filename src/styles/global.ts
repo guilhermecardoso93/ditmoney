@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   --red:#E52E4D;
   --blue:#5429CC;
 
-  --blue-light:#693FF;
+  --blue-light:#6903FF;
 
   --text-title:#363F5F;
   --text-body:#969CB3;
@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   --background: #F0F2F5;
   --shape:#FFFFF;
 }
-
 
 * {
   margin:0;
@@ -46,7 +45,6 @@ body, input, textarea, button {
 h1, h2, h3, h4, h5, h6, strong {
   font-weight:600;
 }
-
 
 button {
   cursor:pointer;
