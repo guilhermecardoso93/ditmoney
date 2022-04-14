@@ -1,7 +1,14 @@
-import { Container } from "./styles";
+import { useEffect } from 'react'
+import { api } from '../../services/api'
+import { Container } from './styles'
 
-export function TransactionsTable(){
-  return(
+export function TransactionsTable () {
+  useEffect(() => {
+    api
+      .get('/transactions')
+      .then(response => console.log(response.data))
+  }, [])
+  return (
     <Container>
       <table>
         <thead>
@@ -13,21 +20,21 @@ export function TransactionsTable(){
           </tr>
         </thead>
         <tbody>
-        <tr>
-            <td className="title">WebSite</td>
-            <td className="deposit">R$1.2000</td>
+          <tr>
+            <td className='title'>WebSite</td>
+            <td className='deposit'>R$1.2000</td>
             <td>Desenvolvimento</td>
             <td>22/03/2022</td>
           </tr>
           <tr>
-            <td className="title">Trigg</td>
-            <td className="withdraw">-R$350,00</td>
+            <td className='title'>Trigg</td>
+            <td className='withdraw'>-R$350,00</td>
             <td>Cartão Crédito</td>
             <td>10/03/2022</td>
           </tr>
           <tr>
-            <td className="title">Salário</td>
-            <td className="withdraw">-R$2000</td>
+            <td className='title'>Salário</td>
+            <td className='withdraw'>-R$2000</td>
             <td>Emprego</td>
             <td>05/03/2022</td>
           </tr>
